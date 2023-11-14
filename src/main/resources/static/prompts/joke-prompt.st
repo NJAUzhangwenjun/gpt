@@ -1,0 +1,1 @@
+告诉我一个 {adjective} joke about {topic}
