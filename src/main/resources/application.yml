@@ -1,5 +1,5 @@
 spring:
   ai:
     openai:
-      api-key: xxxx
+      api-key: xxxxx
       base-url: https://dgr.life/
