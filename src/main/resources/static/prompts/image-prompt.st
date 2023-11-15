@@ -1,0 +1,2 @@
+I NEED to test how the tool works with extremely simple prompts. DO NOT add any detail, just use it AS-IS:
+{message}

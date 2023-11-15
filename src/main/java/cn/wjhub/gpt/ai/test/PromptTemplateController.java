@@ -18,7 +18,7 @@ public class PromptTemplateController {
 
     private final AiClient aiClient;
 
-    @Value("classpath:/prompts/joke-prompt.st")
+    @Value("classpath:/static/prompts/joke-prompt.st")
     private Resource jokeResource;
 
 
