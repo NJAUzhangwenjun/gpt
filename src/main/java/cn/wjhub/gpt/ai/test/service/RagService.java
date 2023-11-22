@@ -1,7 +1,6 @@
 package cn.wjhub.gpt.ai.test.service;
 
 import cn.wjhub.gpt.util.JsonLoader;
-import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.client.AiClient;
@@ -68,26 +67,25 @@ public class RagService {
         return response.getGeneration();
     }
 
-    @NotNull
-    private VectorStoreRetriever getVectorStoreRetriever() {
-        if (this.vectorStoreRetriever == null) {
-            logger.info("Loading JSON as Documents");
-            JsonLoader jsonLoader = new JsonLoader(bikesResource, "name", "price", "shortDescription", "description");
-            List<Document> documents = jsonLoader.load();
-            logger.info("Loading JSON as Documents");
-
-            // Step 2 - Create embeddings and save to vector store
-
-            logger.info("Creating Embeddings...");
-            VectorStore vectorStore = new InMemoryVectorStore(embeddingClient);
-            vectorStore.add(documents);
-            logger.info("Embeddings created.");
-
-            // Step 3 retrieve related documents to query
-
-            this.vectorStoreRetriever = new VectorStoreRetriever(vectorStore);
+    private void getVectorStoreRetriever() {
+        if (this.vectorStoreRetriever != null) {
+            return;
         }
-        return this.vectorStoreRetriever;
+        logger.info("Loading JSON as Documents");
+        JsonLoader jsonLoader = new JsonLoader(bikesResource, "name", "price", "shortDescription", "description");
+        List<Document> documents = jsonLoader.load();
+        logger.info("Loading JSON as Documents");
+
+        // Step 2 - Create embeddings and save to vector store
+
+        logger.info("Creating Embeddings...");
+        VectorStore vectorStore = new InMemoryVectorStore(embeddingClient);
+        vectorStore.add(documents);
+        logger.info("Embeddings created.");
+
+        // Step 3 retrieve related documents to query
+
+        this.vectorStoreRetriever = new VectorStoreRetriever(vectorStore);
     }
 
     private Message getSystemMessage(List<Document> similarDocuments) {
