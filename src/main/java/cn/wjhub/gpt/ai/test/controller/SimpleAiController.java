@@ -1,4 +1,4 @@
-package cn.wjhub.gpt.ai.test;
+package cn.wjhub.gpt.ai.test.controller;
 
 import org.springframework.ai.client.AiClient;
 import org.springframework.beans.factory.annotation.Autowired;

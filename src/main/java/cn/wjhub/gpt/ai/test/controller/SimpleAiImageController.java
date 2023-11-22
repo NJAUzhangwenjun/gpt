@@ -1,4 +1,4 @@
-package cn.wjhub.gpt.ai.test;
+package cn.wjhub.gpt.ai.test.controller;
 
 import com.theokanning.openai.image.CreateImageRequest;
 import com.theokanning.openai.image.ImageResult;
@@ -64,4 +64,6 @@ public class SimpleAiImageController {
         request.setInput(message);
         return openAiService.createModeration(request);
     }
+
+
 }

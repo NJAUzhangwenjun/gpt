@@ -1,4 +1,4 @@
-package cn.wjhub.gpt.ai.test;
+package cn.wjhub.gpt.ai.test.service;
 
 import org.springframework.ai.client.AiResponse;
 import org.springframework.ai.prompt.Prompt;

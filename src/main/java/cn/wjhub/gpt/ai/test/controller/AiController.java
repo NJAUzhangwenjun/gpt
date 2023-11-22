@@ -1,5 +1,6 @@
-package cn.wjhub.gpt.ai.test;
+package cn.wjhub.gpt.ai.test.controller;
 
+import cn.wjhub.gpt.ai.test.service.Completion;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
