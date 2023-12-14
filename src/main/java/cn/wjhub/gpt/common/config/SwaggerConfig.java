@@ -10,20 +10,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    // @Bean
-    // public Docket api() {
-    //     return new Docket(DocumentationType.SWAGGER_2)
-    //             .select()
-    //             .apis(RequestHandlerSelectors.basePackage("cn.wjhub.gpt")) // 指定扫描的控制器包
-    //             .paths(PathSelectors.any())
-    //             .build()
-    //             .apiInfo(new ApiInfoBuilder()
-    //                     .title("Swagger API Documentation")
-    //                     .description("API Documentation for your application")
-    //                     .version("1.0.0")
-    //                     .build());
-    // }
-
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
