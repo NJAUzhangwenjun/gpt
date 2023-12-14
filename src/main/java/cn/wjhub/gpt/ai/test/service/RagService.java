@@ -1,6 +1,6 @@
 package cn.wjhub.gpt.ai.test.service;
 
-import cn.wjhub.gpt.util.JsonLoader;
+import cn.wjhub.gpt.common.util.JsonLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.client.AiClient;

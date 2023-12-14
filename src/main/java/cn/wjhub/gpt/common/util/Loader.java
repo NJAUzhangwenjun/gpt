@@ -1,4 +1,4 @@
-package cn.wjhub.gpt.util;
+package cn.wjhub.gpt.common.util;
 
 import org.springframework.ai.document.Document;
 import org.springframework.ai.transformer.splitter.TextSplitter;

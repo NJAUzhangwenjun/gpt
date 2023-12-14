@@ -1,4 +1,4 @@
-package cn.wjhub.gpt.util;
+package cn.wjhub.gpt.common.util;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -69,7 +69,7 @@ public class JsonLoader implements Loader {
                 Map<String, Object> metadata = this.jsonMetadataGenerator.generate(item);
 
                 Document document;
-                if (!sb.isEmpty()) {
+                if (sb.length() > 0) {
                     document = new Document(sb.toString(), metadata);
                 } else {
                     document = new Document(item.toString(), metadata);

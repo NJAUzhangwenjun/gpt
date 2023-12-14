@@ -3,3 +3,30 @@ spring:
     openai:
       api-key: xxxxx
       base-url: https://dgr.life/
+      model: gpt-3.5-turbo-1106
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wjhub?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 32317128abc
+
+  application:
+    name: gpt
+
+
+
+liteflow:
+  rule-source-ext-data-map:
+    url: jdbc:mysql://localhost:3306/wjhub #--数据库连接
+    driverClassName: com.mysql.cj.jdbc.Driver #--驱动
+    username: root #--用户名
+    password: 32317128abc #--密码
+    applicationName: flow
+    chainTableName: liteflow_chain #--规则引擎表
+    chainApplicationNameField: application_name #--应用名称
+    chainNameField: chain_name  #--规则名称
+    elDataField: el_data  #--具体执行的规则(el表达式)
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.example.flow.domain
