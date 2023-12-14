@@ -27,13 +27,13 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI springShopOpenAPI() {
         return new OpenAPI()
-                .info(new Info().title("AI美妆小助手")
-                        .description("AI美妆小助手API文档")
+                .info(new Info().title("十六进制说")
+                        .description("十六进制说API文档")
                         .version("v1")
-                        .license(new License().name("Apache 2.0").url("https://springdoc.org")))
+                        .license(new License().name("Apache 2.0").url("http://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
-                        .description("项目地址")
-                        .url("https://github.com/NJAUzhangwenjun/gpt"));
+                        .description("外部文档")
+                        .url("https://springshop.wiki.github.org/docs"));
     }
 
 }
