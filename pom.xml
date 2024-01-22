@@ -20,6 +20,7 @@
         <mybatis-plus.version>3.5.4.1</mybatis-plus.version>
         <swagger.version>3.0.0</swagger.version>
         <spring-ai.version>0.7.1-SNAPSHOT</spring-ai.version>
+        <langchain4j.version>0.25.0</langchain4j.version>
     </properties>
     <dependencies>
 
@@ -28,6 +29,24 @@
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.0.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j</artifactId>
+            <version>${langchain4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+            <version>${langchain4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-local-ai</artifactId>
+            <version>${langchain4j.version}</version>
+        </dependency>
+
         <!-- 官方建议是springdoc替代springfox-->
         <dependency>
             <groupId>org.springdoc</groupId>
