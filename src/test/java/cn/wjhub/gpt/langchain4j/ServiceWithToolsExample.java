@@ -49,7 +49,7 @@ public class ServiceWithToolsExample {
     // 天气插件工具
     static class Weather {
 
-        @Tool(name = "实时天气查询", value = {"提供指定地点的实时天气信息"})
+        @Tool(name = "weather", value = {"提供指定地点的实时天气信息"})
         String weather(String city) {
             System.out.println("Called weather with city=" + city);
             return city + "天气多云";
